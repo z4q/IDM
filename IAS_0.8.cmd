@@ -420,7 +420,13 @@ exit /b
 :register_IDM
 
 echo:
-set /p name="What is the name to be registered?"
+set /p fname="What is the first name to be registered?"
+
+echo:
+set /p lname="What is the last name to be registered?"
+
+echo:
+set /p email="What is the email to be registered?"
 
 echo:
 echo Applying registration details...
@@ -428,9 +434,9 @@ echo:
 
 If not defined name set name=Piash
 
-set "reg=HKCU\SOFTWARE\DownloadManager /v FName /t REG_SZ /d "%name%"" & call :_rcont
-set "reg=HKCU\SOFTWARE\DownloadManager /v LName /t REG_SZ /d """ & call :_rcont
-set "reg=HKCU\SOFTWARE\DownloadManager /v Email /t REG_SZ /d "info@tonec.com"" & call :_rcont
+set "reg=HKCU\SOFTWARE\DownloadManager /v FName /t REG_SZ /d "%fname%"" & call :_rcont
+set "reg=HKCU\SOFTWARE\DownloadManager /v LName /t REG_SZ /d "%lname%"" & call :_rcont
+set "reg=HKCU\SOFTWARE\DownloadManager /v Email /t REG_SZ /d "%email%"" & call :_rcont
 set "reg=HKCU\SOFTWARE\DownloadManager /v Serial /t REG_SZ /d "FOX6H-3KWH4-7TSIN-Q4US7"" & call :_rcont
 
 echo:
